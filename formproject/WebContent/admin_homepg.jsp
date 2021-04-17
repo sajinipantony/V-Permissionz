@@ -68,14 +68,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 						<nav>
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="admin_homepg.jsp">Home</a></li>
-													
-								
-								<li><a href="adminprincipalapptview.jsp" class="active"> VIEW PRINCIPAL APPOINTMENT</a></li>
-								<li><a href="adminviewevents.jsp" class="active">VIEW EVENT</a></li>
-								<li><a href="admin_verifyevent.jsp" class="active">VERIFY EVENT</a></li>
-								<li><a href="adminsearch.jsp" class="active">SEARCH STUDENT</a></li>							
-							</ul>
+								<li><a href="adminprincipalapptview.jsp" class="active"> VIEW APPOINTMENT</a></li>
+								<li><a href="adminviewevents.jsp" class="active"> VIEW EVENTS</a></li>
+								<li><a href="admin_verifyevent.jsp" class="active">VERIFY EVENTS</a></li>
+								<li><a href="adminsearch.jsp" class="active">SEARCH STUDENT</a></li>	
+								<li><a href="updatetime.jsp" class="active">UPDATE  TIMESHEET</a></li>						
+							</ul>			
+					
 							
 							
 						</nav>
