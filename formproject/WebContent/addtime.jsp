@@ -1,15 +1,14 @@
-
+<%@ page import = "java.io.*,java.util.*" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.Statement" %>
 <%@ page import="javax.servlet.ServletException" %>
 <%@ page import="javax.servlet.annotation.WebServlet" %>
 <%@ page import="javax.servlet.http.HttpServlet" %>
 <%@ page import="javax.servlet.http.HttpServletRequest" %>
 <%@ page import="javax.servlet.http.HttpServletResponse" %>
-<%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ANNS An Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>VPermissionz...</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -51,9 +50,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Prata" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width:300px;
+}
+
+tr:nth-child(even) {
+  background-color: #f6ecf0;
+  height:70px;
+}
+</style>
 </head>
+	<body>
 	
-<body>
 <!-- header -->
 	<div class="header-w3ls-agileinfo">
 		
@@ -91,8 +109,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="adminviewevents.jsp" class="active"> VIEW EVENTS</a></li>
 								<li><a href="admin_verifyevent.jsp" class="active">VERIFY EVENTS</a></li>
 								<li><a href="adminsearch.jsp" class="active">SEARCH STUDENT</a></li>	
-								<li><a href="updatetime.jsp" class="active">UPDATE  TIMESHEET</a></li>						
+								<li><a href="updatetime.jsp" class="active">ADD  TIMESHEET</a></li>		
+															
 							</ul>
+							
 							
 						</nav>
 					</div>
@@ -101,164 +121,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header -->
-<div class="contact" id="contact">
-		<div class="container">
-			<div class="w3ls-heading">
-				
-				
-			</div>
-			<div class="w3layouts-grids">
-				
-				<div class="col-md-8 contact-form">
-				
-				<%
-				try
-				{
-					
-					String id=request.getQueryString();
-					System.out.println(id);
+<h1 align="center">ADD PRINCIPAL TIMESHEET</h1>
+<form action="addtime" method="post">
+<table>
+<tr>
+	<td><label>Date</label></td>
+	<td><input type="date" name="date"></td>
+	</tr>
+<tr>
+	<td><label>Time </label></td>
+	<td><input type="text" name="time"></td>
+	</tr>
 
-					
-//String name=session.getAttribute("username").toString();	
-	
+<tr><td><input type="submit" value="submit"></td></tr>
 
+</table>
 
-   
-	Class.forName("com.mysql.jdbc.Driver");	
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
-
-	PreparedStatement ps=con.prepareStatement("update event set status='approved' where id='"+id+"' ");
-
-
-ps.executeUpdate();
-
-
-%>
-<br><p> Event Approved</p>
-</div>
-<% 
-response.sendRedirect("admin_verifyevent.jsp");
-}
-catch(Exception e1)
-{
-out.println(e1.getMessage());
-}
-%>						
-	
-</div>
-
-
-
-
-</div></div><!-- Footer -->
-<div class="footer w3ls">
-	<div class="container">
-	
-		<div class="footer-main">
-			<div class="footer-top">
-				<div class="col-md-4 ftr-grid fg2">
-					
-			   <div class="clearfix"> </div>
-			</div>
-			<div class="copyrights">
-				<p>&copy; 2017 ANNS. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-			</div>
-		</div>
-	</div>
-	
-</div>
- 
-	
-
-<!-- Footer -->	
-
-	<!-- start-smoth-scrolling -->
-	
-<!-- js -->
-		<!--//pop-up-box -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!--pop-up-box -->
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<script>
-					$(document).ready(function() {
-					$('.popup-with-zoom-anim').magnificPopup({
-					type: 'inline',
-					fixedContentPos: false,
-					fixedBgPos: true,
-					overflowY: 'auto',
-					closeBtnInside: true,
-					preloader: false,
-					midClick: true,
-					removalDelay: 300,
-					mainClass: 'my-mfp-zoom-in'
-					});
-
-					});
-					</script>
-<!-- //pop-up-box -->
-
-<!-- //js -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-
-			<script src="js/jzBox.js"></script>
-
-			<!-- Countdown-Timer-JavaScript -->
-			<script src="js/simplyCountdown.js"></script>
-			<script>
-				var d = new Date(new Date().getTime() + 948 * 120 * 120 * 2000);
-
-				// default example
-				simplyCountdown('.simply-countdown-one', {
-					year: d.getFullYear(),
-					month: d.getMonth() + 1,
-					day: d.getDate()
-				});
-
-				// inline example
-				simplyCountdown('.simply-countdown-inline', {
-					year: d.getFullYear(),
-					month: d.getMonth() + 1,
-					day: d.getDate(),
-					inline: true
-				});
-
-				//jQuery example
-				$('#simply-countdown-losange').simplyCountdown({
-					year: d.getFullYear(),
-					month: d.getMonth() + 1,
-					day: d.getDate(),
-					enableUtc: false
-				});
-			</script>
-		<!-- //Countdown-Timer-JavaScript -->
-
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
-<script type="text/javascript" src="js/bootstrap.js"></script>
+</form>
 </body>
 </html>
-				
