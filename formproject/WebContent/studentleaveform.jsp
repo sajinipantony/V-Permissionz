@@ -1,4 +1,4 @@
-
+<%@ page import = "java.io.*,java.util.*" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
@@ -27,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ANNS An Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>VPermissionz...</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -128,8 +128,11 @@ tr:nth-child(even) {
 <form action="studentaddleaveform" method= "post">
 <table>
 <tr><td>
+<%
+         Date date = new Date();
+%>
 <label>Date</label></td>
-<td><input type="date" name="date"></td>
+<td><input type="date" name="date" ></td>
 <tr><td><label>First Name:</label></td>
 <td><input type="text" name="firstname"></td></tr>
 <tr><td>
@@ -173,7 +176,10 @@ tr:nth-child(even) {
 </form> 
 	
 	
-	
+	<script>
+var dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+</script>
 	
 	
 	<!-- //contact -->

@@ -1,3 +1,4 @@
+<%@ page import = "java.io.*,java.util.*" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
@@ -130,7 +131,7 @@ tr:nth-child(even) {
 	</tr>
 <tr>
 	<td><label>Date: </label></td>
-	<td><input type="date" name="date"></td>
+	<td><input type="date" name="date" ></td>
 	</tr>
 <tr>
 	<td><label for="act">Select Activity:</label></td>
@@ -179,7 +180,10 @@ tr:nth-child(even) {
 </table>
 
 </form>
-	
+	<script>
+var dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+</script>
 	
 <!-- //contact -->
 

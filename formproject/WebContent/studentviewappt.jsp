@@ -27,7 +27,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ANNS An Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Vimala College An Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -264,7 +264,7 @@ ResultSet rs=null;
 			   <div class="clearfix"> </div>
 			</div>
 			<div class="copyrights">
-				<p>&copy; 2017 ANNS. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p>&copy; 2017 V-permissionz. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 			</div>
 		</div>
 	</div>

@@ -1,3 +1,4 @@
+<%@ page import = "java.io.*,java.util.*" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
@@ -138,12 +139,33 @@ tr:nth-child(even) {
 																					</div>
 													</div>
 													<!-- //Modal4 -->	
+													<%
+try{
+	
+ResultSet rs = null;
+	HttpSession ses = request.getSession();
+	String stud = (String)ses.getAttribute("dept");
+	String email = (String)ses.getAttribute("email");
+	String name = null;
+	 Date d = new Date();
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root","");
+	Statement st=con.createStatement();
+	rs=st.executeQuery("select * from login where dept_name='"+stud+"' and email = '"+email+"'  ");
+	while(rs.next())
+	{
+		
+		name = rs.getString(2);
+		
+		
+	
+	%>
 <form action="adminprincipalappt" method="post">
 <table>
-<tr height="70px"><td width="300px"><h1 align="relative">PERMISSION MEET THE PRINCIPAL</h1></td></tr>
+<tr height="70px"><td></td><td width="300px"><h1 align="relative">PERMISSION MEET THE PRINCIPAL</h1></td></tr>
 
 <tr height="70px"><td width="300px" ><label>First Name:</label></td>
-<td width="300px"><input type="text" name="firstname"></td></tr>
+<td width="300px"><input type="text" name="firstname" value="<%=name%>"></td></tr>
 <tr height="70px"><td width="300px"><label>Last Name: </label></td>
 <td width="300px"><input type="text" name="lastname"></td></tr>
 <tr height="70px"><td width="300px"><label for="dep">Department/club:</label></td>
@@ -179,20 +201,23 @@ tr:nth-child(even) {
 <td width="300px"><textarea rows="4" cols="50" name="purpose" id="purpose"></textarea></td></tr>
 
 <tr height="70px"><td width="300px" ><label>Date :</label></td>
-<td width="300px"><input type="date" name="date"></td></tr>
-
-<tr height="70px"><td width="300px" ><label>Time :</label></td>
-<td width="300px"><input type="time" name="time"></td></tr>
+<td width="300px"><input type="text" name="date" ></td><td><a href ="serachtime.jsp">VIEW TIME SLOT</a></td></tr>
 
 
 <tr height="70px"><td width="300px"><td><input type="submit" value="submit"></td></tr>
 </table>
 </form>
 
+<%}
+	}
+													catch(Exception e)
+													{
+													System.out.println(e);}
+													
+													%>
+	
 
-			
 
-<	
 			
 <!-- //banner -->
 <!-- bootstrap-pop-up -->
@@ -205,7 +230,7 @@ tr:nth-child(even) {
 				</div>
 				<section>
 					<div class="modal-body">
-					       <h3 class="agileinfo_sign">ANNS COLLEGE OF TECHNICAL ENGINEERING</h3>	
+					       <h3 class="agileinfo_sign">VPermissionz.......</h3>	
 						<img src="images/ab.jpg" alt=" " class="img-responsive" />
 						<p>Ut enim ad minima veniam, quis nostrum 
 							exercitationem ullam corporis suscipit laboriosam, 

@@ -424,7 +424,7 @@ catch(Exception e){
 			   <div class="clearfix"> </div>
 			</div>
 			<div class="copyrights">
-				<p>&copy; 2017 ANNS. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p>&copy; 2017 V-permissionz. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 			</div>
 		</div>
 	</div>

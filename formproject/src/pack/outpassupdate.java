@@ -38,13 +38,13 @@ public class outpassupdate extends HttpServlet {
 			System.out.println("inside try....");
 			String id= request.getParameter("id1");
 			String status=request.getParameter("status");
-			String status1="approved";
+			String status1="granded";
 			
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
 			Statement st=con.createStatement();
-			st.executeUpdate("update tbl_teachers set status='"+status1+"' where id='"+id+"' ");
+			st.executeUpdate("update outpass set status='"+status1+"' where id='"+id+"' ");
 				response.sendRedirect("clubdeptviewoutpass1.jsp?"+"id="+id);
 				
 			con.close();

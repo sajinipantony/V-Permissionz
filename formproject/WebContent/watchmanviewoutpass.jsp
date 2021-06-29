@@ -124,7 +124,7 @@ tr:nth-child(even) {
 <div class="contact" id="contact">
 		<div class="container">
 			<div class="w3ls-heading">
-				<h3><font color="red"> VIEW Leave Forms</font></h3>
+				<h3><font color="red"> View OutPass</font></h3>
 				
 			</div>
 			<div class="w3layouts-grids">
@@ -137,14 +137,14 @@ tr:nth-child(even) {
 				
 <tr height="70px">
 
-<td width="300px" ><center><font color="red">FIRST NAME</font></center></td>
-<td width="300px" ><center><font color="red">LAST NAME</font></center></td>
+<td width="300px" ><center><font color="red" size="20px">FIRST NAME</font></center></td>
+<td width="300px" ><center><font color="red" size="20px">LAST NAME</font></center></td>
 
-<td width="300px" ><center><font color="red">ACTIVITY</font></center></td>
+<td width="300px" ><center><font color="red" size="20px">ACTIVITY</font></center></td>
 
-<td width="300px"><center><font color="red">DEPARTMENT</font></center></td>
-<td width="300px"><center><font color="red">PURPOSE</font></center></td>
-<td width="300px"><center><font color="red">DATE</font></center></td>
+<td width="300px"><center><font color="red" size="20px">DEPARTMENT</font></center></td>
+<td width="300px"><center><font color="red" size="20px">PURPOSE</font></center></td>
+<td width="300px"><center><font color="red" size="20px">DATE</font></center></td>
 </tr>		
 	
 	
@@ -287,7 +287,7 @@ st.close();
 			   <div class="clearfix"> </div>
 			</div>
 			<div class="copyrights">
-				<p>&copy; 2017 ANNS. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p>&copy; 2017 V-permissionz. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 			</div>
 		</div>
 	</div>

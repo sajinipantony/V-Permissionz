@@ -94,7 +94,7 @@ tr:nth-child(even) {
 								<li><a href="adminviewevents.jsp" class="active"> VIEW EVENTS</a></li>
 								<li><a href="admin_verifyevent.jsp" class="active">VERIFY EVENTS</a></li>
 								<li><a href="adminsearch.jsp" class="active">SEARCH STUDENT</a></li>	
-								<li><a href="updatetime.jsp" class="active">UPDATE  TIMESHEET</a></li>						
+								<li><a href="serachtime.jsp" class="active">UPDATE  TIMESHEET</a></li>						
 							</ul>
 							
 							
