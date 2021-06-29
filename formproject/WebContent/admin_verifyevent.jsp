@@ -139,7 +139,7 @@ tr:nth-child(even) {
 <td width="300px" ><center><font color="red">IN-CHARGE</font></center></td>
 <td width="300px" ><center><font color="red">DATE</font></center></td>
 
-<td width="300px"><center><font color="red">IMAGE</font></center></td>
+
 <td width="300px"><center><font color="red">UPDATE</font></center></td>
 <td width="300px align"center"><center><font color="red">STATUS</font></center></td>
 </tr>		
