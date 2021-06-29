@@ -200,8 +200,9 @@ ResultSet rs = null;
 <tr height="70px"><td width="300px"><label>Enter the purpose:</label></td>
 <td width="300px"><textarea rows="4" cols="50" name="purpose" id="purpose"></textarea></td></tr>
 
-<tr height="70px"><td width="300px" ><label>Date :</label></td>
-<td width="300px"><input type="text" name="date" ></td><td><a href ="serachtime.jsp">VIEW TIME SLOT</a></td></tr>
+<tr height="70px"><td width="300px" ><label>Date :</label></td><td width="300px"><input type="date" name="date" ></td></tr>
+<tr height="70px"><td width="300px" ><label>Time :</label></td><td width="300px"><input type="time" name="time" ></td><td><a href ="serachtime.jsp">VIEW TIME SLOT</a></td></tr>
+
 
 
 <tr height="70px"><td width="300px"><td><input type="submit" value="submit"></td></tr>
