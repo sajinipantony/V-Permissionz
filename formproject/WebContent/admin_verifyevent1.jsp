@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="w3layouts-grids">
 				<div class="col-md-8 contact-form">
-				
+				<table>
 					<form action="adminupdateevent" method="get"  >
 					
 			<%
@@ -155,37 +155,38 @@ ResultSet rs=null;
 					
 						
 						<div class="clearfix"> </div>	
-						<font color="gray">Event Name  </font> <br><br>
-							<input type="hidden" class="phone" name="id1" placeholder="Event id" required="" value="<%=id %>">
-									
-						<input type="text" class="phone" name="eventname" placeholder="Event Name" required="" value="<%=eventname %>">
+						
+							<td><input type="hidden" class="phone" name="id1" placeholder="Event id" required="" value="<%=id %>">
+						<tr><td>
+						<font color="gray">Event Name  </font> <br><br></td>	
+					<td>	<input type="text" class="phone" name="eventname" placeholder="Event Name" required="" value="<%=eventname %>">
+						</td></tr>
+						<tr><td><font color="gray">Hall Name  </font> <br><br></td>
+						<td><input type="text" class="phone" name="hallname" placeholder="Hall Name" required="" value="<%=hallname %>">
+						<br><br></td></tr>
+						<tr><td><font color="gray">Department Name  </font><br><br> </td>
+					<td><input  type="text" class="phone" name="deptname" placeholder="Department Name" required="" value="<%=dept %>">
+						<br><br></td></tr>
+						<tr><td><font color="gray">Department In-Charge </font> <br><br></td>
+						<td><input type="text" class="phone" name="incharge" placeholder="In charge" required="" value="<%=incharge %>"></td></tr>
 						<br><br>
-						<font color="gray">Hall Name  </font> <br><br>
-						<input type="text" class="phone" name="hallname" placeholder="Hall Name" required="" value="<%=hallname %>">
-						<br><br>
-						<font color="gray">Department Name  </font><br><br> 
-						<input  type="text" class="phone" name="deptname" placeholder="Department Name" required="" value="<%=dept %>">
-						<br><br>
-						<font color="gray">Department In-Charge </font> <br><br>
-						<input type="text" class="phone" name="incharge" placeholder="In charge" required="" value="<%=incharge %>">
-						<br><br>
-				<font color="gray">Date  </font> <br><br>
-						<input type="date"    name="date"  value="<%=date %>">
+				<tr><td><font color="gray">Date  </font> <br><br></td>
+						<td><input type="date"    name="date"  value="<%=date %>"></td></tr>
+				<br><br><br><br>
+				<tr><td>
+				<font color="gray">Status  </font> <br><br></td>
+					<td>	<input type="text"    name="status"  value="<%=status %>"></td></tr>
 				<br><br>
+				<tr><td>
+				<input type="submit" value="Update Event">		</td>
+				</form> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
-				<font color="gray">Status  </font> <br><br>
-						<input type="text"    name="status"  value="<%=status %>">
-				<br><br>
-				
-				<input type="submit" value="Update Event">		
-				</form>
-				<br><br>
 					
-				<form action="admindeleteevent" method="get" a >
+				<form action="admindeleteevent" method="get"  >
 				<input type="hidden" class="phone" name="id" placeholder="Event Name" required="" value="<%=id %>">
 							
-				<input type="submit" value="Delete Event">	
-				
+				<td><input type="submit" value="Delete Event">	</td>
+			</tr>
 				<%
 		
 	}
@@ -206,7 +207,7 @@ catch(Exception e){
  %>
 						
 				</form>
-				
+				</table>
 				
 				
 				<div class="clearfix"> </div>

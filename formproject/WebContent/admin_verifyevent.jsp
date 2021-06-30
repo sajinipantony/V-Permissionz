@@ -204,7 +204,8 @@ ResultSet rs=null;
 <td width="500px"><%=incharge%></td>
 <td width="500px"><%=date%></td>
 
-
+<td><img alt="not available" src="adminviewevents?id=<%=id %>" width="200px"> 
+ </td>
  
   <td> <a href="admin_verifyevent1.jsp?id= <%=id %>"> <img src="pics/1.png" width="40px"> </a> <font color="red"></font></center></td>
 	
