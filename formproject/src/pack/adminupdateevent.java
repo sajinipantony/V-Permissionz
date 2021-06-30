@@ -47,10 +47,10 @@ public class adminupdateevent extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
 			Statement st=con.createStatement();
-st.executeUpdate("update event set eventname='"+eventname +"', hallname='"+hallname+"', cdeptname='"+department+"', inchargename='"+incharge+"' , status='"+status+"' where id='"+id+"'");
+			st.executeUpdate("update event set eventname='"+eventname +"', hallname='"+hallname+"', cdeptname='"+department+"', inchargename='"+incharge+"' , status='"+status+"' where id='"+id+"'");
 			
 			con.close();
-			response.sendRedirect("adminviewevents1.jsp?"+"id="+id);
+			response.sendRedirect("adminviewevents.jsp?"+"id="+id);
 		}
 		catch(Exception e)
 		{

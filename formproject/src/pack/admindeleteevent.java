@@ -42,7 +42,7 @@ public class admindeleteevent extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
 			Statement st=con.createStatement();
 			st.executeUpdate("delete from event where id='"+id+"'");
-			response.sendRedirect("adminviewevent.jsp?deleted");
+			response.sendRedirect("adminviewevents.jsp?deleted");
 			con.close();
 			
 		}

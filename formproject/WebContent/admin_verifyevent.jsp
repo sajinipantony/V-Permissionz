@@ -132,16 +132,16 @@ tr:nth-child(even) {
 				
 <tr height="90px">
 
-<td width="300px" ><center><font color="red">EVENT NAME</font></center></td>
-<td width="300px" ><center><font color="red">HALL NAME</font></center></td>
+<td width="500px" ><center><font color="red">EVENT NAME</font></center></td>
+<td width="500px" ><center><font color="red">HALL NAME</font></center></td>
 
-<td width="300px" ><center><font color="red">DEPARTMENT NAME</font></center></td>
-<td width="300px" ><center><font color="red">IN-CHARGE</font></center></td>
-<td width="300px" ><center><font color="red">DATE</font></center></td>
+<td width="500px" ><center><font color="red">DEPARTMENT NAME</font></center></td>
+<td width="500px" ><center><font color="red">IN-CHARGE</font></center></td>
+<td width="500px" ><center><font color="red">DATE</font></center></td>
 
 
-<td width="300px"><center><font color="red">UPDATE</font></center></td>
-<td width="300px align"center"><center><font color="red">STATUS</font></center></td>
+<td width="500px"><center><font color="red">UPDATE</font></center></td>
+<td width="500px align"center"><center><font color="red">STATUS</font></center></td>
 </tr>		
 	
  
@@ -195,22 +195,18 @@ ResultSet rs=null;
 	//	price=rs.getDouble(7);
 		
 		%>
-		 <tr  align="center" >
+		 <tr  align="center" height="90px" >
 
-<td width="300px"><%=eventname %></td>
-<td width="300px"><%=hallname%></td>
+<td width="500px"><%=eventname %></td>
+<td width="500px"><%=hallname%></td>
 
-<td width="300px"><%=deptname%></td>
-<td width="300px"><%=incharge%></td>
-<td width="300px"><%=date%></td>
-
-<td>
-<img alt="" width="200px" src="admin_verifyevent?id=<%=id%>" > 
- </td>
-  <td width="300px">  <a href="admin_verifyevent1.jsp?id= <%=id %>"> <img src="pics/1.png" width="40px"> </a> </td>
+<td width="500px"><%=deptname%></td>
+<td width="500px"><%=incharge%></td>
+<td width="500px"><%=date%></td>
 
 
-<td width="300px" ><center><font color="red"></font></center></td>
+ 
+  <td> <a href="admin_verifyevent1.jsp?id= <%=id %>"> <img src="pics/1.png" width="40px"> </a> <font color="red"></font></center></td>
 	
 	
 	
